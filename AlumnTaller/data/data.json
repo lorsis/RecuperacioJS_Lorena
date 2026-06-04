@@ -1,0 +1,38 @@
+{
+  "clientes": [
+    { "id": "12345678A", "nombre": "Juan", "apellidos": "Pérez García", "telefono": "600123456", "email": "juan@email.com" },
+    { "id": "87654321B", "nombre": "María", "apellidos": "López Martínez", "telefono": "600654321", "email": "maria@email.com" },
+    { "id": "23456789C", "nombre": "Carlos", "apellidos": "Ruiz Navarro", "telefono": "611111111", "email": "carlos@email.com" },
+    { "id": "34567890D", "nombre": "Ana", "apellidos": "Sánchez Torres", "telefono": "622222222", "email": "ana@email.com" },
+    { "id": "45678901E", "nombre": "Pedro", "apellidos": "Martín Gil", "telefono": "633333333", "email": "pedro@email.com" },
+    { "id": "56789012F", "nombre": "Laura", "apellidos": "Vega Romero", "telefono": "644444444", "email": "laura@email.com" },
+    { "id": "67890123G", "nombre": "Javier", "apellidos": "Moreno Díaz", "telefono": "655555555", "email": "javier@email.com" },
+    { "id": "78901234H", "nombre": "Sofía", "apellidos": "Castro León", "telefono": "666666666", "email": "sofia@email.com" },
+    { "id": "89012345I", "nombre": "Miguel", "apellidos": "Ortega Pérez", "telefono": "677777777", "email": "miguel@email.com" },
+    { "id": "90123456J", "nombre": "Elena", "apellidos": "Ramos Serrano", "telefono": "688888888", "email": "elena@email.com" }
+  ],
+  "coches": [
+    { "matricula": "1234ABC", "marca": "Seat", "modelo": "Ibiza", "color": "Rojo", "kilometros": 50000, "observaciones": "Aceite bajo", "clienteId": "12345678A" },
+    { "matricula": "5678DEF", "marca": "Ford", "modelo": "Focus", "color": "Azul", "kilometros": 75000, "observaciones": "Frenos desgastados", "clienteId": "87654321B" },
+    { "matricula": "1111GHI", "marca": "Volkswagen", "modelo": "Golf", "color": "Blanco", "kilometros": 62000, "observaciones": "Revisión pendiente", "clienteId": "23456789C" },
+    { "matricula": "2222JKL", "marca": "Renault", "modelo": "Clio", "color": "Negro", "kilometros": 41000, "observaciones": "Sin incidencias", "clienteId": "34567890D" },
+    { "matricula": "3333MNO", "marca": "Peugeot", "modelo": "308", "color": "Gris", "kilometros": 88000, "observaciones": "Cambio de neumáticos", "clienteId": "45678901E" },
+    { "matricula": "4444PQR", "marca": "Toyota", "modelo": "Corolla", "color": "Plata", "kilometros": 35000, "observaciones": "Batería nueva", "clienteId": "56789012F" },
+    { "matricula": "5555STU", "marca": "Hyundai", "modelo": "i30", "color": "Azul", "kilometros": 29000, "observaciones": "Sin incidencias", "clienteId": "67890123G" },
+    { "matricula": "6666VWX", "marca": "Kia", "modelo": "Ceed", "color": "Rojo", "kilometros": 53000, "observaciones": "Pastillas de freno gastadas", "clienteId": "78901234H" },
+    { "matricula": "7777YZA", "marca": "BMW", "modelo": "Serie 1", "color": "Blanco", "kilometros": 67000, "observaciones": "Revisión anual", "clienteId": "89012345I" },
+    { "matricula": "8888BCD", "marca": "Audi", "modelo": "A3", "color": "Negro", "kilometros": 72000, "observaciones": "Filtro de aire pendiente", "clienteId": "90123456J" }
+  ],
+  "reservas": [
+    { "id": 1, "clienteId": "12345678A", "matricula": "1234ABC", "fechaDesde": "2026-06-15T09:00", "fechaHasta": "2026-06-15T18:00", "estado": "Pendiente" },
+    { "id": 2, "clienteId": "87654321B", "matricula": "5678DEF", "fechaDesde": "2026-06-16T10:00", "fechaHasta": "2026-06-16T17:00", "estado": "Preparación" },
+    { "id": 3, "clienteId": "23456789C", "matricula": "1111GHI", "fechaDesde": "2026-06-17T08:30", "fechaHasta": "2026-06-17T14:00", "estado": "Terminado" },
+    { "id": 4, "clienteId": "34567890D", "matricula": "2222JKL", "fechaDesde": "2026-06-18T09:00", "fechaHasta": "2026-06-18T13:00", "estado": "Pendiente" },
+    { "id": 5, "clienteId": "45678901E", "matricula": "3333MNO", "fechaDesde": "2026-06-19T11:00", "fechaHasta": "2026-06-19T19:00", "estado": "Pendiente" },
+    { "id": 6, "clienteId": "56789012F", "matricula": "4444PQR", "fechaDesde": "2026-06-20T08:00", "fechaHasta": "2026-06-20T12:00", "estado": "Preparación" },
+    { "id": 7, "clienteId": "67890123G", "matricula": "5555STU", "fechaDesde": "2026-06-21T10:30", "fechaHasta": "2026-06-21T15:30", "estado": "Terminado" },
+    { "id": 8, "clienteId": "78901234H", "matricula": "6666VWX", "fechaDesde": "2026-06-22T09:15", "fechaHasta": "2026-06-22T17:15", "estado": "Pendiente" },
+    { "id": 9, "clienteId": "89012345I", "matricula": "7777YZA", "fechaDesde": "2026-06-23T08:45", "fechaHasta": "2026-06-23T16:45", "estado": "Terminado" },
+    { "id": 10, "clienteId": "90123456J", "matricula": "8888BCD", "fechaDesde": "2026-06-24T10:00", "fechaHasta": "2026-06-24T18:00", "estado": "Preparación" }
+  ]
+}

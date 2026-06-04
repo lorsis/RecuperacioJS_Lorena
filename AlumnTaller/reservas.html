@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Mecánico - Sistema de Gestión</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/font-awesome.all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/bootstrap.min.js"></script>
+    
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand">
+                <i class="fas fa-car"></i> Taller Mecánico - Sistema de Gestión
+            </span>
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <i class="fas fa-bars"></i> Menú
+            </button>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menú Principal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="list-group">
+                <button class="list-group-item list-group-item-action">
+                    <a href="./clientes.html" class="text-decoration-none text-dark">
+                        <i class="fas fa-users"></i> Clientes
+                    </a>
+                </button>
+                <button class="list-group-item list-group-item-action">
+                    <a href="./coches.html" class="text-decoration-none text-dark">
+                        <i class="fas fa-car"></i> Coches
+                    </a>
+                </button>
+                <button class="list-group-item list-group-item-action">
+                    <a href="./reservas.html" class="text-decoration-none text-dark">
+                        <i class="fas fa-calendar-alt"></i> Reservas
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+            <!-- Sección Reservas -->
+        <div id="seccionReservas" class="seccion">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-calendar-plus"></i> Crear Reserva
+                </div>
+                <div class="card-body">
+                    <form id="formReserva" novalidate>
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <label for="reservaCliente" class="form-label">Cliente *</label>
+                                <select class="form-select" id="selectCliente" ></select>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="reservaCoche" class="form-label">Coche *</label>
+                                <select class="form-select" id="selectCoche" ></select>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="fechaDesde" class="form-label">Fecha Desde *</label>
+                                <input type="datetime-local" class="form-control" id="fechaDesde" >
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="fechaHasta" class="form-label">Fecha Hasta *</label>
+                                <input type="datetime-local" class="form-control" id="fechaHasta" >
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="estado" class="form-label">Estado</label>
+                                <select class="form-select" id="estado">
+                                    <option value="pendiente">Pendiente</option>
+                                    <option value="preparación">Preparación</option>
+                                    <option value="terminado">Terminado</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <p id="errorReserva" class="text-danger"></p>
+                                <button type="submit" class="btn btn-primary" id="guardarReserva">Crear Reserva</button>
+                                 <p class="text-muted">* Campos obligatorios</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-calendar-alt"></i> Agenda de Reservas
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="tablaReservas">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Cliente</th>
+                                    <th>Coche</th>
+                                    <th>Fecha Desde</th>
+                                    <th>Fecha Hasta</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyReservas"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body> 
+</html>
+

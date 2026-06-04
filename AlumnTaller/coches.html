@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Mecánico - Sistema de Gestión</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/font-awesome.all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/bootstrap.min.js"></script>
+   
+
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand">
+                <i class="fas fa-car"></i> Taller Mecánico - Sistema de Gestión
+            </span>
+            <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <i class="fas fa-bars"></i> Menú
+            </button>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menú Principal</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="list-group">
+                <button class="list-group-item list-group-item-action">
+                    <a href="./clientes.html" class="text-decoration-none text-dark">
+                        <i class="fas fa-users"></i> Clientes
+                    </a>
+                </button>
+                <button class="list-group-item list-group-item-action">
+                    <a href="./coches.html" class="text-decoration-none text-dark">
+                        <i class="fas fa-car"></i> Coches
+                    </a>
+                </button>
+                <button class="list-group-item list-group-item-action">
+                    <a href="./reservas.html" class="text-decoration-none text-dark">
+                        <i class="fas fa-calendar-alt"></i> Reservas
+                    </a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+
+
+   <!-- Sección Coches -->
+        <div id="seccionCoches" class="seccion" >
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-car-side"></i> Registrar Coche
+                </div>
+                <div class="card-body">
+                    <form id="formCoche" novalidate>
+                        <div class="row">
+                            <div class="col-md-3 mb-3">
+                                <label for="clienteSelect" class="form-label">Cliente *</label>
+                                <select class="form-select" id="selectCliente"></select>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="marca" class="form-label">Marca *</label>
+                                <input type="text" class="form-control" id="marca" >
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="modelo" class="form-label">Modelo *</label>
+                                <input type="text" class="form-control" id="modelo" required>
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="matricula" class="form-label">Matrícula *</label>
+                                <input type="text" class="form-control" id="matricula" ">
+                            </div>
+                            <div class="col-md-1 mb-3">
+                                <label for="color" class="form-label">Color</label>
+                                <input type="text" class="form-control" id="color">
+                            </div>
+                            <div class="col-md-2 mb-3">
+                                <label for="kilometros" class="form-label">Kilómetros</label>
+                                <input type="number" class="form-control" id="kilometros">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="observaciones" class="form-label">Observaciones</label>
+                                <textarea class="form-control" id="observaciones" rows="2"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <p class="text-danger" id="error"></p>
+                                <button type="submit" id="guardarCoche" class="btn btn-primary">Guardar Coche</button>
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-list"></i> Lista de Coches
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-striped" id="tablaCoches">
+                            <thead>
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th>Marca</th>
+                                    <th>Modelo</th>
+                                    <th>Matrícula</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbodyCoches"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
